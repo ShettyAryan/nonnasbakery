@@ -20,7 +20,7 @@ export default function Navigation() {
       <div className="max-w-[1440px] mx-auto flex items-center justify-between">
         {/* Left Links */}
         <div className="hidden lg:flex gap-10 items-center flex-1">
-          {["Our Story", "Menu", "Locations", "Catering"].map((link) => (
+          {["Our Story", "Menu", "Press", "Catering"].map((link) => (
             <a
               key={link}
               href={`#${link.toLowerCase().replace(" ", "-")}`}

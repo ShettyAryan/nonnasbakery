@@ -33,7 +33,7 @@ const pressItems = [
 
 export default function PressSection() {
   return (
-    <section className="bg-cream py-32 overflow-hidden">
+    <section id="press" className="bg-cream py-32 overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
         {/* Label */}
         <FadeUp>
