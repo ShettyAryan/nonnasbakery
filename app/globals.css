@@ -27,6 +27,12 @@
   * {
     cursor: none;
   }
+
+  @media (max-width: 1023px) {
+    * {
+      cursor: auto;
+    }
+  }
 }
 
 @layer utilities {
@@ -36,12 +42,12 @@
   }
 
   .text-hero {
-    font-size: clamp(4.5rem, 13vw, 200px);
+    font-size: clamp(2.5rem, 12vw, 200px);
     line-height: 0.88;
   }
 
   .text-section {
-    font-size: clamp(3rem, 7vw, 100px);
+    font-size: clamp(2rem, 6vw, 100px);
     line-height: 0.92;
   }
 

@@ -41,9 +41,9 @@ const feedImages = [
 
 export default function InstagramSection() {
   return (
-    <section className="bg-cream py-32">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
+    <section className="bg-cream py-16 sm:py-24 md:py-32">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6 mb-10 sm:mb-14">
           <div>
             <FadeUp>
               <div className="flex items-center gap-4 mb-5">
@@ -79,7 +79,7 @@ export default function InstagramSection() {
         </div>
 
         {/* Masonry-style grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
           {feedImages.map((img, i) => (
             <FadeUp key={i} delay={i * 80}>
               <div

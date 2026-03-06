@@ -29,6 +29,11 @@ export const metadata: Metadata = {
     "Baked with Memory. Served with Love. Nonna's is an artisan Italian-heritage bakery baking the finest breads, pastries, and confections daily.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: {

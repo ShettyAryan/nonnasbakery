@@ -41,10 +41,10 @@ const values = [
 
 export default function PhilosophySection() {
   return (
-    <section className="bg-cream py-32">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+    <section className="bg-cream py-16 sm:py-24 md:py-32">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
         <FadeUp>
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-4 mb-4 sm:mb-6">
             <span className="w-12 h-px bg-raspberry" />
             <span className="text-xs font-sans font-bold small-caps text-raspberry tracking-widest">
               Our Philosophy
@@ -53,12 +53,12 @@ export default function PhilosophySection() {
         </FadeUp>
 
         <FadeUp delay={100}>
-          <h2 className="font-serif text-section text-near-black mb-20 max-w-xl leading-[0.9]">
+          <h2 className="font-serif text-section text-near-black mb-12 sm:mb-20 max-w-xl leading-[0.9]">
             THE WAY <span className="text-crimson">NONNA</span> MADE IT
           </h2>
         </FadeUp>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
           {values.map((val, i) => (
             <FadeUp key={val.label} delay={i * 120}>
               <div className="group flex flex-col gap-5">
@@ -77,7 +77,7 @@ export default function PhilosophySection() {
         </div>
 
         <FadeUp delay={500}>
-          <div className="mt-20 pt-10 border-t border-near-black/8">
+          <div className="mt-12 sm:mt-20 pt-8 sm:pt-10 border-t border-near-black/8">
             <a
               href="#"
               className="text-raspberry font-sans font-bold small-caps text-sm flex items-center gap-2 hover:gap-4 transition-all w-fit"

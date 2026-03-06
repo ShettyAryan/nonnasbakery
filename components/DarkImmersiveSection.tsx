@@ -3,11 +3,11 @@ import FadeUp from "./FadeUp";
 
 export default function DarkImmersiveSection() {
   return (
-    <section className="bg-dark-maroon py-40 overflow-hidden relative">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 flex flex-col items-center text-center">
+    <section className="bg-dark-maroon py-24 sm:py-32 md:py-40 overflow-hidden relative">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10 flex flex-col items-center text-center">
         {/* Circular bread image with rotating text */}
         <FadeUp>
-          <div className="relative mb-16">
+          <div className="relative mb-10 sm:mb-16">
             {/* Rotating circular text SVG */}
             <div
               className="absolute inset-0 animate-spin-slow pointer-events-none"
@@ -39,7 +39,7 @@ export default function DarkImmersiveSection() {
 
             {/* Bread photo */}
             <div
-              className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-8 border-white/8 shadow-2xl relative"
+              className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 sm:border-8 border-white/8 shadow-2xl relative"
               style={{ boxShadow: "0 0 80px rgba(232,23,74,0.2)" }}
             >
               <Image
@@ -53,19 +53,19 @@ export default function DarkImmersiveSection() {
         </FadeUp>
 
         <FadeUp delay={200}>
-          <h2 className="font-serif text-white text-5xl lg:text-7xl mb-6 max-w-2xl leading-[0.95]">
+          <h2 className="font-serif text-white text-3xl sm:text-4xl md:text-5xl lg:text-7xl mb-4 sm:mb-6 max-w-2xl leading-[0.95]">
             Always Made Your Bread With Love
           </h2>
         </FadeUp>
 
         <FadeUp delay={350}>
-          <p className="text-white/45 font-sans text-base lg:text-lg mb-12 max-w-md leading-relaxed">
+          <p className="text-white/45 font-sans text-sm sm:text-base lg:text-lg mb-8 sm:mb-12 max-w-md leading-relaxed px-2">
             Since 1982. The same starter. The same hands. The same love.
           </p>
         </FadeUp>
 
         <FadeUp delay={500}>
-          <button className="bg-crimson text-white px-12 py-5 rounded-full font-sans font-bold small-caps text-base hover:bg-raspberry transition-colors duration-300 flex items-center gap-3 group">
+          <button className="bg-crimson text-white px-8 sm:px-12 py-4 sm:py-5 rounded-full font-sans font-bold small-caps text-sm sm:text-base hover:bg-raspberry transition-colors duration-300 flex items-center gap-3 group">
             Order Your Box Today
             <svg
               className="w-4 h-4 group-hover:translate-x-1 transition-transform"

@@ -41,8 +41,8 @@ const menuItems = [
 
 export default function MenuSection() {
   return (
-    <section id="menu" className="py-32 bg-cream-light overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 mb-16">
+    <section id="menu" className="py-16 sm:py-24 md:py-32 bg-cream-light overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 mb-10 sm:mb-16">
         <FadeUp>
           <div className="flex items-center gap-4 mb-6">
             <span className="w-12 h-px bg-raspberry" />
@@ -60,18 +60,18 @@ export default function MenuSection() {
       </div>
 
       {/* Horizontal scroll carousel */}
-      <div className="flex gap-8 overflow-x-auto px-6 lg:px-12 pb-8 hide-scrollbar pt-16">
+      <div className="flex gap-3 sm:gap-5 md:gap-6 lg:gap-8 overflow-x-auto px-4 sm:px-6 lg:px-12 pb-6 sm:pb-8 hide-scrollbar pt-8 sm:pt-12 md:pt-16">
         {menuItems.map((item, i) => (
           <div
             key={item.name}
-            className="min-w-[320px] lg:min-w-[360px] bg-cream rounded-2xl shadow-lg relative pt-20 pb-8 px-8 group flex-shrink-0 hover:-translate-y-2 transition-transform duration-400"
+            className="max-w-[280px] sm:min-w-[280px] md:min-w-[300px] lg:min-w-[360px] bg-cream rounded-xl sm:rounded-2xl shadow-lg relative pt-12 sm:pt-16 md:pt-20 pb-4 sm:pb-6 md:pb-8 px-4 sm:px-6 md:px-8 group flex-shrink-0 hover:-translate-y-2 transition-transform duration-400"
             style={{
               boxShadow: "0 8px 40px rgba(139,0,0,0.08)",
-              marginTop: i % 2 === 0 ? "2.5rem" : "0",
+              marginTop: i % 2 === 0 ? "1.5rem" : "0",
             }}
           >
             {/* Product photo overflowing top */}
-            <div className="absolute -top-12 left-8 w-40 h-40 rounded-full overflow-hidden shadow-xl border-4 border-cream group-hover:-translate-y-3 transition-transform duration-500">
+            <div className="absolute -top-6 sm:-top-8 md:-top-12 left-4 sm:left-6 md:left-8 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden shadow-xl border-2 sm:border-4 border-cream group-hover:-translate-y-2 sm:group-hover:-translate-y-3 transition-transform duration-500">
               <Image
                 src={item.img}
                 alt={item.name}
@@ -82,25 +82,25 @@ export default function MenuSection() {
 
             {/* Tag */}
             {item.tag && (
-              <div className="absolute top-6 right-6">
-                <span className="bg-raspberry/10 text-raspberry text-[10px] font-sans font-bold small-caps px-3 py-1 rounded-full">
+              <div className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-6 md:right-6">
+                <span className="bg-raspberry/10 text-raspberry text-[9px] sm:text-[10px] font-sans font-bold small-caps px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">
                   {item.tag}
                 </span>
               </div>
             )}
 
-            <div className="mt-8">
-              <h3 className="font-bebas text-3xl text-near-black tracking-wider mb-2 leading-tight group-hover:text-crimson transition-colors">
+            <div className="mt-5 sm:mt-6 md:mt-8">
+              <h3 className="font-bebas text-xl sm:text-2xl md:text-3xl text-near-black tracking-wider mb-1 sm:mb-2 leading-tight group-hover:text-crimson transition-colors">
                 {item.name}
               </h3>
-              <p className="text-near-black/55 text-sm font-sans leading-relaxed mb-6 line-clamp-2">
+              <p className="text-near-black/55 text-xs sm:text-sm font-sans leading-relaxed mb-4 sm:mb-6 line-clamp-2">
                 {item.desc}
               </p>
-              <div className="flex items-center justify-between">
-                <span className="font-serif text-crimson text-2xl">
+              <div className="flex items-center justify-between gap-2">
+                <span className="font-serif text-crimson text-lg sm:text-xl md:text-2xl">
                   {item.price}
                 </span>
-                <button className="border border-near-black/20 hover:border-crimson hover:text-crimson text-near-black/60 text-xs font-sans font-bold small-caps px-4 py-2 rounded-full transition-colors">
+                <button className="border border-near-black/20 hover:border-crimson hover:text-crimson text-near-black/60 text-[10px] sm:text-xs font-sans font-bold small-caps px-3 sm:px-4 py-1.5 sm:py-2 rounded-full transition-colors flex-shrink-0">
                   Add to Order
                 </button>
               </div>
@@ -110,7 +110,7 @@ export default function MenuSection() {
       </div>
 
       <FadeUp>
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 mt-12">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 mt-8 sm:mt-12">
           <a
             href="#"
             className="text-crimson font-sans font-bold small-caps text-sm flex items-center gap-2 hover:gap-4 transition-all w-fit"

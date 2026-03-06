@@ -10,8 +10,8 @@ const boxItems = [
 
 export default function FeatureSection() {
   return (
-    <section className="py-32 bg-cream">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+    <section className="py-16 sm:py-24 md:py-32 bg-cream">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-center">
         {/* Left — Product photo */}
         <FadeUp>
           <div className="relative group">
@@ -29,17 +29,17 @@ export default function FeatureSection() {
 
             {/* Circular badge overlapping corner */}
             <div
-              className="absolute -top-8 -right-8 w-44 h-44 bg-cream rounded-full flex items-center justify-center text-center p-5 shadow-xl group-hover:rotate-12 transition-transform duration-700 border-2 border-crimson/15"
+              className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 lg:-top-8 lg:-right-8 w-28 h-28 sm:w-36 sm:h-36 lg:w-44 lg:h-44 bg-cream rounded-full flex items-center justify-center text-center p-3 sm:p-4 lg:p-5 shadow-xl group-hover:rotate-12 transition-transform duration-700 border-2 border-crimson/15"
             >
               <div>
                 <svg
-                  className="w-6 h-6 text-crimson mx-auto mb-1.5 opacity-60"
+                  className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-crimson mx-auto mb-1 sm:mb-1.5 opacity-60"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
                 </svg>
-                <p className="font-serif text-crimson text-sm leading-tight">
+                <p className="font-serif text-crimson text-[10px] sm:text-xs lg:text-sm leading-tight">
                   A DASH OF NONNA IN EVERY BITE
                 </p>
               </div>
@@ -47,10 +47,10 @@ export default function FeatureSection() {
 
             {/* Rotated label */}
             <div
-              className="absolute bottom-12 -left-6 bg-raspberry text-white px-5 py-2.5 rounded-full shadow-lg"
+              className="absolute bottom-8 sm:bottom-12 -left-2 sm:-left-6 bg-raspberry text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-lg text-[10px] sm:text-xs"
               style={{ transform: "rotate(-4deg)" }}
             >
-              <p className="font-sans font-bold text-xs small-caps">
+              <p className="font-sans font-bold small-caps">
                 Guaranteed Fresh ✦
               </p>
             </div>
@@ -58,7 +58,7 @@ export default function FeatureSection() {
         </FadeUp>
 
         {/* Right — Copy */}
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-6 sm:gap-8">
           <FadeUp delay={100}>
             <div className="flex items-center gap-4">
               <span className="w-8 h-px bg-raspberry" />
@@ -108,7 +108,7 @@ export default function FeatureSection() {
           </FadeUp>
 
           <FadeUp delay={600}>
-            <button className="w-fit bg-crimson text-white px-10 py-4 rounded-full font-sans font-bold small-caps text-sm hover:bg-dark-maroon transition-colors duration-300 flex items-center gap-3 group mt-2">
+            <button className="w-fit bg-crimson text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full font-sans font-bold small-caps text-sm hover:bg-dark-maroon transition-colors duration-300 flex items-center gap-3 group mt-2">
               Build Your Box
               <svg
                 className="w-4 h-4 group-hover:translate-x-1 transition-transform"

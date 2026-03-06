@@ -3,11 +3,11 @@ import FadeUp from "./FadeUp";
 
 export default function AboutSection() {
   return (
-    <section id="our-story" className="bg-cream-light py-32 overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+    <section id="our-story" className="bg-cream-light py-16 sm:py-24 md:py-32 overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* Section Label */}
         <FadeUp>
-          <div className="flex items-center gap-4 mb-20">
+          <div className="flex items-center gap-4 mb-12 sm:mb-20">
             <span className="w-12 h-px bg-raspberry" />
             <span className="text-xs font-sans font-bold small-caps text-raspberry tracking-widest">
               Our Story
@@ -15,13 +15,13 @@ export default function AboutSection() {
           </div>
         </FadeUp>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-center">
           {/* Left — Images collage */}
-          <div className="relative h-[600px]">
-            {/* Main image */}
+          <div className="relative w-full min-h-[320px] h-[380px] sm:h-[420px] md:h-[480px] lg:h-[600px]">
+            {/* Main image — responsive position/size for mobile/tablet */}
             <FadeUp delay={100}>
               <div
-                className="absolute top-0 left-0 w-[75%] h-80 rounded-xl overflow-hidden shadow-2xl"
+                className="absolute top-0 left-0 w-[70%] sm:w-[72%] lg:w-[75%] h-44 sm:h-56 md:h-64 lg:h-80 rounded-xl overflow-hidden shadow-2xl z-10"
                 style={{ boxShadow: "0 24px 60px rgba(139,0,0,0.12)" }}
               >
                 <Image
@@ -33,14 +33,11 @@ export default function AboutSection() {
               </div>
             </FadeUp>
 
-            {/* Offset second image */}
+            {/* Offset second image — no overlap on mobile/tablet, overlap on desktop */}
             <FadeUp delay={250}>
               <div
-                className="absolute bottom-0 right-0 w-[65%] h-72 rounded-xl overflow-hidden shadow-xl"
-                style={{
-                  boxShadow: "0 20px 50px rgba(139,0,0,0.10)",
-                  transform: "translateY(-20px)",
-                }}
+                className="absolute bottom-0 right-0 w-[65%] h-40 sm:h-48 md:h-60 lg:h-72 rounded-xl overflow-hidden shadow-xl z-0 translate-y-0 lg:-translate-y-5"
+                style={{ boxShadow: "0 20px 50px rgba(139,0,0,0.10)" }}
               >
                 <Image
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhQ8ZY5EJvEB24kOhUeGQO-QXMdU3Volr3F0Gx4aac92jwssHCqBBXufsI6ECoq3WItCTW5OaCg6Eq33hpRPI5WabJWuTwm1Oxwzrz0zpO8jF5GsMP6JKoycYn5uEKza12ueHurNdKzvjQRtjlL53rarWXInECs-ZOMIrDgNPDdaoC7vDiEMKNTpesw85E3q93N0nWMqBd9j9BbPJbzGt8PxlUDuHluPznSpt1s0W9mBAQT-8-gPJvd-LfraMuGmoXZF6HB9CG2Fw"
@@ -51,14 +48,13 @@ export default function AboutSection() {
               </div>
             </FadeUp>
 
-            {/* Floating stat card */}
+            {/* Floating stat card — bottom-left on mobile/tablet, right edge on desktop */}
             <FadeUp delay={400}>
               <div
-                className="absolute top-1/2 -right-6 lg:-right-12 bg-crimson text-white p-6 rounded-xl shadow-2xl z-20 w-36"
-                style={{ transform: "translateY(-50%) rotate(2deg)" }}
+                className="absolute bottom-4 left-4 lg:bottom-auto lg:left-auto lg:top-1/2 lg:-translate-y-1/2 lg:right-2 xl:-right-6 2xl:-right-12 bg-crimson text-white p-4 sm:p-6 rounded-xl shadow-2xl z-20 w-28 sm:w-36 lg:rotate-[2deg]"
               >
-                <div className="font-serif text-5xl leading-none mb-1">40+</div>
-                <div className="text-white/80 text-xs font-sans small-caps leading-tight">
+                <div className="font-serif text-4xl sm:text-5xl leading-none mb-1">40+</div>
+                <div className="text-white/80 text-[10px] sm:text-xs font-sans small-caps leading-tight">
                   Years of Baking Heritage
                 </div>
               </div>
@@ -106,7 +102,7 @@ export default function AboutSection() {
           </div>
 
           {/* Right — Copy */}
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6 sm:gap-8">
             <FadeUp delay={150}>
               <h2 className="font-serif text-section text-near-black leading-[0.9]">
                 THREE{" "}
@@ -135,14 +131,14 @@ export default function AboutSection() {
             </FadeUp>
 
             <FadeUp delay={500}>
-              <div className="flex gap-12 pt-4 border-t border-near-black/10">
+              <div className="flex flex-wrap gap-6 sm:gap-12 pt-4 border-t border-near-black/10">
                 {[
                   { num: "4AM", label: "When we wake up" },
                   { num: "12", label: "Bread varieties" },
                   { num: "3", label: "Generations" },
                 ].map((stat) => (
                   <div key={stat.label}>
-                    <div className="font-serif text-3xl text-crimson">
+                    <div className="font-serif text-2xl sm:text-3xl text-crimson">
                       {stat.num}
                     </div>
                     <div className="text-xs font-sans font-bold small-caps text-near-black/50 mt-1">

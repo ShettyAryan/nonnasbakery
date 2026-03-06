@@ -21,7 +21,7 @@ const offerings = [
 
 export default function CateringSection() {
   return (
-    <section id="catering" className="bg-dark-maroon py-32 overflow-hidden relative">
+    <section id="catering" className="bg-dark-maroon py-16 sm:py-24 md:py-32 overflow-hidden relative">
       {/* Ghost watermark */}
       <div
         className="absolute top-0 right-0 font-serif text-[20vw] text-white/[0.03] select-none pointer-events-none leading-none"
@@ -30,9 +30,9 @@ export default function CateringSection() {
         CATERING
       </div>
 
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         {/* Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-end mb-14 sm:mb-20">
           <div>
             <FadeUp>
               <div className="flex items-center gap-4 mb-6">
@@ -58,16 +58,16 @@ export default function CateringSection() {
         </div>
 
         {/* Offerings */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-14 sm:mb-20">
           {offerings.map((item, i) => (
             <FadeUp key={item.title} delay={i * 150}>
-              <div className="border border-white/10 rounded-2xl p-8 group hover:border-raspberry/50 hover:bg-white/[0.03] transition-all duration-400">
+              <div className="border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 group hover:border-raspberry/50 hover:bg-white/[0.03] transition-all duration-400">
                 <div className="w-10 h-10 rounded-full border border-raspberry/30 flex items-center justify-center text-raspberry mb-6 group-hover:bg-raspberry group-hover:border-raspberry transition-all">
                   <span className="font-serif text-lg leading-none">
                     {["✦", "◆", "●"][i]}
                   </span>
                 </div>
-                <h3 className="font-serif text-white text-2xl mb-3 group-hover:text-raspberry transition-colors">
+                <h3 className="font-serif text-white text-xl sm:text-2xl mb-2 sm:mb-3 group-hover:text-raspberry transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-white/55 text-sm font-sans leading-relaxed mb-4">
@@ -83,9 +83,9 @@ export default function CateringSection() {
 
         {/* CTA Strip */}
         <FadeUp delay={450}>
-          <div className="bg-raspberry rounded-2xl p-10 lg:p-14 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+          <div className="bg-raspberry rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-14 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 sm:gap-8">
             <div>
-              <h3 className="font-serif text-white text-3xl lg:text-4xl mb-3">
+              <h3 className="font-serif text-white text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-3">
                 Ready to plan your event?
               </h3>
               <p className="text-white/75 font-sans text-sm">
@@ -93,7 +93,7 @@ export default function CateringSection() {
                 catering inquiry.
               </p>
             </div>
-            <button className="bg-white text-raspberry font-sans font-bold small-caps text-sm px-10 py-4 rounded-full hover:bg-cream transition-colors flex-shrink-0">
+            <button className="bg-white text-raspberry font-sans font-bold small-caps text-sm px-8 sm:px-10 py-3 sm:py-4 rounded-full hover:bg-cream transition-colors flex-shrink-0 w-full sm:w-auto text-center">
               Enquire Now →
             </button>
           </div>

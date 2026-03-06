@@ -13,7 +13,7 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`bg-cream sticky top-0 z-40 px-6 lg:px-12 py-4 transition-shadow duration-300 ${
+      className={`bg-cream sticky top-0 z-40 px-4 sm:px-6 lg:px-12 py-3 sm:py-4 transition-shadow duration-300 ${
         scrolled ? "shadow-[0_4px_24px_rgba(139,0,0,0.08)]" : ""
       }`}
     >
@@ -33,10 +33,10 @@ export default function Navigation() {
 
         {/* Logo */}
         <div className="flex-shrink-0 text-center">
-          <div className="font-serif text-3xl text-crimson leading-none tracking-tight">
+          <div className="font-serif text-2xl sm:text-3xl text-crimson leading-none tracking-tight">
             NONNA&apos;S
           </div>
-          <div className="text-[9px] font-sans font-bold small-caps text-near-black/50 tracking-[0.2em] mt-0.5">
+          <div className="text-[8px] sm:text-[9px] font-sans font-bold small-caps text-near-black/50 tracking-[0.2em] mt-0.5">
             EST. 1982 · HANDMADE DAILY
           </div>
         </div>
@@ -88,11 +88,11 @@ export default function Navigation() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="lg:hidden bg-cream border-t border-crimson/10 mt-4 pt-4 pb-6 flex flex-col gap-4 px-2">
-          {["Our Story", "Menu", "Locations", "Catering", "Press"].map(
+          {["Our Story", "Menu","Press", "Catering", ].map(
             (link) => (
               <a
                 key={link}
-                href="#"
+                href={`#${link.toLowerCase().replace(" ", "-")}`}
                 className="font-serif text-2xl text-crimson"
                 onClick={() => setMenuOpen(false)}
               >

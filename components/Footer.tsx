@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-dark-maroon border-t border-white/5 pt-24 pb-12 relative overflow-hidden">
+    <footer className="bg-dark-maroon border-t border-white/5 pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-12 relative overflow-hidden">
       {/* Wheat sprig watermark */}
       <div className="absolute bottom-0 right-0 opacity-[0.04] pointer-events-none select-none">
         <svg
@@ -20,17 +20,17 @@ export default function Footer() {
         </svg>
       </div>
 
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-16 mb-14 sm:mb-20">
           {/* Brand col */}
-          <div className="lg:col-span-4">
-            <div className="font-serif text-4xl text-white leading-none tracking-tight mb-1">
+          <div className="sm:col-span-2 lg:col-span-4">
+            <div className="font-serif text-3xl sm:text-4xl text-white leading-none tracking-tight mb-1">
               NONNA&apos;S
             </div>
-            <div className="text-[10px] font-sans font-bold small-caps text-white/30 tracking-[0.2em] mb-6">
+            <div className="text-[10px] font-sans font-bold small-caps text-white/30 tracking-[0.2em] mb-4 sm:mb-6">
               EST. 1982 · HANDMADE DAILY
             </div>
-            <p className="text-white/45 font-sans text-sm leading-relaxed max-w-xs mb-8">
+            <p className="text-white/45 font-sans text-sm leading-relaxed max-w-xs mb-6 sm:mb-8">
               Baked with Memory. Served with Love. An artisan Italian heritage
               bakery honoring three generations of craft.
             </p>
@@ -67,7 +67,7 @@ export default function Footer() {
 
           {/* Menu */}
           <div className="lg:col-span-2">
-            <h4 className="text-white font-sans font-bold small-caps text-xs tracking-widest mb-8 opacity-50">
+            <h4 className="text-white font-sans font-bold small-caps text-xs tracking-widest mb-4 sm:mb-8 opacity-50">
               Menu
             </h4>
             <ul className="space-y-3">
@@ -83,7 +83,7 @@ export default function Footer() {
 
           {/* Company */}
           <div className="lg:col-span-2">
-            <h4 className="text-white font-sans font-bold small-caps text-xs tracking-widest mb-8 opacity-50">
+            <h4 className="text-white font-sans font-bold small-caps text-xs tracking-widest mb-4 sm:mb-8 opacity-50">
               Company
             </h4>
             <ul className="space-y-3">
@@ -98,11 +98,11 @@ export default function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div className="lg:col-span-4">
-            <h4 className="text-white font-sans font-bold small-caps text-xs tracking-widest mb-8 opacity-50">
+          <div className="sm:col-span-2 lg:col-span-4">
+            <h4 className="text-white font-sans font-bold small-caps text-xs tracking-widest mb-4 sm:mb-8 opacity-50">
               Join the Table
             </h4>
-            <p className="text-white/45 font-sans text-sm leading-relaxed mb-6">
+            <p className="text-white/45 font-sans text-sm leading-relaxed mb-4 sm:mb-6">
               Fresh updates, seasonal menus, and Nonna&apos;s secret recipes —
               straight to your inbox.
             </p>
@@ -122,9 +122,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-white/25 text-xs font-sans small-caps tracking-widest">
-          <p>© 2024 Nonna&apos;s Artisan Bakery. All Rights Reserved.</p>
-          <div className="flex gap-8">
+        <div className="border-t border-white/8 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 text-white/25 text-[10px] sm:text-xs font-sans small-caps tracking-widest text-center md:text-left">
+          <p className="order-2 md:order-1">© 2024 Nonna&apos;s Artisan Bakery. All Rights Reserved.</p>
+          <div className="flex flex-wrap gap-4 sm:gap-8 justify-center order-1 md:order-2">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
             <a href="#" className="hover:text-white transition-colors">Accessibility</a>
