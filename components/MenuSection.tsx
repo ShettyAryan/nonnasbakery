@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FadeUp from "./FadeUp";
+import { BLUR_DATA_URL } from "@/lib/image";
 
 const menuItems = [
   {
@@ -76,6 +77,10 @@ export default function MenuSection() {
                 src={item.img}
                 alt={item.name}
                 fill
+                sizes="(max-width: 640px) 96px, (max-width: 768px) 128px, 160px"
+                quality={80}
+                placeholder="blur"
+                blurDataURL={BLUR_DATA_URL}
                 className="object-cover"
               />
             </div>

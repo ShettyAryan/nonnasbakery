@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FadeUp from "./FadeUp";
+import { BLUR_DATA_URL } from "@/lib/image";
 
 const feedImages = [
   {
@@ -92,6 +93,11 @@ export default function InstagramSection() {
                   src={img.src}
                   alt={img.alt}
                   fill
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                  quality={75}
+                  placeholder="blur"
+                  blurDataURL={BLUR_DATA_URL}
+                  loading="lazy"
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 {/* Hover overlay */}

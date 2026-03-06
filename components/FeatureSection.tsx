@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FadeUp from "./FadeUp";
+import { BLUR_DATA_URL } from "@/lib/image";
 
 const boxItems = [
   { name: "Sourdough", desc: "24h fermented", qty: "1 loaf" },
@@ -23,6 +24,10 @@ export default function FeatureSection() {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfAOCZHAikNqFbu40ygKKGiYfsXJNYmw1Z69dx7I3vt0E3tPEP4jLYCxpxU4cqyrCb7R-87g2AG1dOujGl0Exke1RGpF0YxdSeV9C_7JtpijoSYPQDtJSnC1yUXykk4hjNyWHhYiJHAO0IGPutfBvelaPm_oSoq94P1D_v29fVvFhuHdxJtlmbx_ejTBpaqOTLOOkjdSy1iOSjjGhXZsWW7QMgp0eip3VZ35SwQ_cPBCpbLoZJrn3-LdBhbS23uQiYJp9FnM7kfYI"
                 alt="Nonna's signature bakery box"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={80}
+                placeholder="blur"
+                blurDataURL={BLUR_DATA_URL}
                 className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
               />
             </div>

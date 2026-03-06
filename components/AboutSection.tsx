@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FadeUp from "./FadeUp";
+import { BLUR_DATA_URL } from "@/lib/image";
 
 export default function AboutSection() {
   return (
@@ -28,6 +29,10 @@ export default function AboutSection() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH_v3omScK-zetfg2NqsW2HU6l9kfV4sRXkvQHFritl3piV944OgjK5TrCwJfDgAEkdhIprN-V6eKhnhJUPzIL9kR4ckSN9JFL_DjVy1elUUDuYRA52ZQT19hxWzLRjM7LGU235A-Hz3dlGq7j79_SxHrk9bKZbuhDGzk8G3Fr1lHMpHUdbhP4NnPVMApHeLB9D7JAGAHs41Eqz9m72dXC9vzgh6fLJfxqgEXCV8iaIAZ6atTVndEqKpW03EKohNwHyW0OdQeIiOw"
                   alt="Artisan bread baking process"
                   fill
+                  sizes="(max-width: 640px) 70vw, (max-width: 1024px) 45vw, 560px"
+                  quality={80}
+                  placeholder="blur"
+                  blurDataURL={BLUR_DATA_URL}
                   className="object-cover"
                 />
               </div>
@@ -43,6 +48,10 @@ export default function AboutSection() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhQ8ZY5EJvEB24kOhUeGQO-QXMdU3Volr3F0Gx4aac92jwssHCqBBXufsI6ECoq3WItCTW5OaCg6Eq33hpRPI5WabJWuTwm1Oxwzrz0zpO8jF5GsMP6JKoycYn5uEKza12ueHurNdKzvjQRtjlL53rarWXInECs-ZOMIrDgNPDdaoC7vDiEMKNTpesw85E3q93N0nWMqBd9j9BbPJbzGt8PxlUDuHluPznSpt1s0W9mBAQT-8-gPJvd-LfraMuGmoXZF6HB9CG2Fw"
                   alt="Traditional Italian sourdough"
                   fill
+                  sizes="(max-width: 640px) 65vw, (max-width: 1024px) 45vw, 468px"
+                  quality={80}
+                  placeholder="blur"
+                  blurDataURL={BLUR_DATA_URL}
                   className="object-cover"
                 />
               </div>

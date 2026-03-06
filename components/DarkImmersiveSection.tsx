@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FadeUp from "./FadeUp";
+import { BLUR_DATA_URL } from "@/lib/image";
 
 export default function DarkImmersiveSection() {
   return (
@@ -46,6 +47,11 @@ export default function DarkImmersiveSection() {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH_v3omScK-zetfg2NqsW2HU6l9kfV4sRXkvQHFritl3piV944OgjK5TrCwJfDgAEkdhIprN-V6eKhnhJUPzIL9kR4ckSN9JFL_DjVy1elUUDuYRA52ZQT19hxWzLRjM7LGU235A-Hz3dlGq7j79_SxHrk9bKZbuhDGzk8G3Fr1lHMpHUdbhP4NnPVMApHeLB9D7JAGAHs41Eqz9m72dXC9vzgh6fLJfxqgEXCV8iaIAZ6atTVndEqKpW03EKohNwHyW0OdQeIiOw"
                 alt="Artisan bread, baked with love"
                 fill
+                sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, (max-width: 1024px) 256px, 320px"
+                quality={80}
+                placeholder="blur"
+                blurDataURL={BLUR_DATA_URL}
+                loading="lazy"
                 className="object-cover"
               />
             </div>

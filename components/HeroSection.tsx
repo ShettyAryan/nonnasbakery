@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FadeUp from "./FadeUp";
+import { BLUR_DATA_URL } from "@/lib/image";
 
 export default function HeroSection() {
   return (
@@ -110,6 +111,11 @@ export default function HeroSection() {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKenFhzFVWkMny2KS7VP9mEVN2JRN3cVCqSSnBV_Uu6IRpQjQCDw7zad2w-mM7hKHZMhKwVqegxcA-tFGfYDdwqHdBfB-QjvpB0F0cjA0xHVDYoBx3pgLzBmJBmcdIb2sw9bKoceBMxH0_l5ClBI2xxqai2x238f1m4KOvDAWpTadwUHRc1zVDYCF-ETP3-rYVkrZT-yGLWrlfKn2t-xz5STzWJaxOsZf0aWMNFccfbok0nOeVo4kxMZicZ_v1PleOIm14Vlhwnxw"
                 alt="Artisan sourdough loaf"
                 fill
+                sizes="(max-width: 640px) 192px, (max-width: 768px) 256px, (max-width: 1024px) 288px, 384px"
+                priority
+                quality={80}
+                placeholder="blur"
+                blurDataURL={BLUR_DATA_URL}
                 className="object-cover"
               />
             </div>
@@ -125,6 +131,10 @@ export default function HeroSection() {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuA--R3PvIi0dTpv6Wlij-WJgoglBDUknLakYkzkMTbTBm2hjdZiaQiXHfZuhwh52VCnDWKZdHUjKWzwq3JSvylFrRr2YaZSziXzwb2amUt-70c-Jtfi5p7VBMOIDndZHMaATYzOOpsK1PT_4HH6PWGBtKAAgafj67AOsz4w6-TSZOE3LnwTraqgIRoG4GkiWbvsV3vIVlPn6gvD_S2OI5OBDu8Sh74S-Vo5GzsEW2CBYmI4AfgxaGtSPB8WfCuaCT00kfPpMWSsu5Q"
                 alt="Ricotta cannoli"
                 fill
+                sizes="(max-width: 640px) 144px, (max-width: 768px) 176px, (max-width: 1024px) 208px, 256px"
+                quality={80}
+                placeholder="blur"
+                blurDataURL={BLUR_DATA_URL}
                 className="object-cover"
               />
             </div>
@@ -137,6 +147,10 @@ export default function HeroSection() {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUNhmr9gW7TFEKxHFvDmkBU16n4_YLiWlNFxFFeKUBI7J0utBCxREomGgjjkStQ7FgXjzv9O8bb20Y-BtcfNUzuTKfgFaMVosw5npjzq_APmOClNDMcqenQpb45nT3UNa1uGFTb7Wgb_RVO5k52isxVV48215LH0nS6F--WRMfz8IGR8lrZSEtFGXegcK0ZusSuVoTgDoPGIYEyh54O95vnWmGBNirOKj3A-FpaF9C3dJ-pMu2F3Afc1gWbLgke7wBrZmJOqhr7QQ"
                 alt="Flour and baking tools"
                 fill
+                sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, (max-width: 1024px) 144px, 176px"
+                quality={75}
+                placeholder="blur"
+                blurDataURL={BLUR_DATA_URL}
                 className="object-cover"
               />
             </div>
